@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "718555200790",
+    "project_id": "mzinga-ac711",
+    "storage_bucket": "mzinga-ac711.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718555200790:android:609035e8e5f28d05892437",
+        "android_client_info": {
+          "package_name": "com.example.mzinga"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAMTCAhpMQbpe_Bloxt0Isuf0RrRkkxp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
