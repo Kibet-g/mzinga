@@ -1,23 +1,24 @@
-// lib/views/auth/sign_in_screen.dart
 import 'package:flutter/material.dart';
 import 'package:mzinga/controllers/auth_controller.dart';
 
 class SignInScreen extends StatefulWidget {
-  const SignInScreen({Key? key}) : super(key: key);
+  final AuthController authController;
+
+  const SignInScreen({Key? key, required this.authController}) : super(key: key);
 
   @override
   State<SignInScreen> createState() => _SignInScreenState();
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  final AuthController _authController = AuthController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   Future<void> _signIn() async {
     String email = _emailController.text.trim();
     String password = _passwordController.text.trim();
-    var user = await _authController.signInWithEmailPassword(email, password);
+
+    var user = await widget.authController.signInWithEmailPassword(email, password);
 
     if (user != null) {
       Navigator.pushReplacementNamed(context, '/home');

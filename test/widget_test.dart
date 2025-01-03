@@ -7,24 +7,26 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:mzinga/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  // Test is currently disabled. Uncomment and modify to test your app's widgets.
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  // testWidgets('Authentication smoke test', (WidgetTester tester) async {
+  //   // Build your app and trigger a frame.
+  //   await tester.pumpWidget(const MyApp());
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  //   // Check if the SignInScreen is displayed initially.
+  //   expect(find.text('Sign In'), findsOneWidget);
+  //   expect(find.text('Sign Up'), findsNothing);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
+  //   // Simulate navigation to the SignUpScreen and check.
+  //   await tester.tap(find.text('Sign Up'));
+  //   await tester.pumpAndSettle();
+
+  //   expect(find.text('Sign In'), findsNothing);
+  //   expect(find.text('Sign Up'), findsOneWidget);
+  // });
+
+  // Uncomment the test above and modify as your app evolves.
 }

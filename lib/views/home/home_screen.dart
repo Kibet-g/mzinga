@@ -1,11 +1,10 @@
-// lib/views/home/home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:mzinga/controllers/auth_controller.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  final AuthController authController;
 
-  final AuthController _authController = AuthController();
+  const HomeScreen({Key? key, required this.authController}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +15,14 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () async {
-              await _authController.signOut();
-              Navigator.pushReplacementNamed(context, '/signIn');
+              await authController.signOut();
+              Navigator.pushReplacementNamed(context, '/');
             },
           ),
         ],
       ),
-      body: Center(
-        child: Text("Welcome, ${_authController.currentUser?.email ?? 'Guest'}!"),
+      body: const Center(
+        child: Text("Welcome to Mzinga!"),
       ),
     );
   }
